@@ -1,0 +1,16 @@
+{
+  "manifest_version": 3,
+  "name": "Local Password Vault",
+  "version": "1.0",
+  "description": "Store encrypted passwords locally in Chrome (master password is never sent anywhere).",
+  "permissions": ["storage"],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Local Password Vault"
+  }
+}

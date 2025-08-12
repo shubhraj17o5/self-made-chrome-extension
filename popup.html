@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Local Password Vault</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="wrap">
+      <div class="card">
+        <header class="card-header">
+          <h1>🔒 Local Password Vault</h1>
+          <div class="status" id="status"></div>
+        </header>
+
+        <main class="card-body">
+          <section id="locked-section" class="section">
+            <label class="label">Master Password</label>
+            <input id="master-input" type="password" placeholder="Enter master password" autocomplete="current-password" />
+            <div class="row">
+              <button id="unlock-btn" class="btn primary">Unlock</button>
+            </div>
+            <p class="muted">(First time? Enter a new master password and click Unlock — a salt will be generated.)</p>
+          </section>
+
+          <section id="vault" class="section hidden">
+            <div class="controls">
+              <button id="lock-btn" class="btn ghost">Lock</button>
+            </div>
+
+            <form id="add-form" class="add-form">
+              <h2 class="small">Add credential</h2>
+              <input id="site" placeholder="Site / label" required />
+              <input id="username" placeholder="Username / email" required />
+              <input id="password" placeholder="Password" required />
+              <div class="row">
+                <button type="submit" class="btn primary">Save</button>
+              </div>
+            </form>
+
+            <h2 class="small">Saved credentials</h2>
+            <ul id="list" class="list"></ul>
+          </section>
+        </main>
+
+        <footer class="card-footer muted">
+          <small>All data stays local & encrypted — master password not stored.</small>
+        </footer>
+      </div>
+    </div>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
