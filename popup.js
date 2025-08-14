@@ -120,22 +120,7 @@ unlockBtn.addEventListener('click', async () => {
 });
 
 lockBtn?.addEventListener('click', () => {
-  
-let autoLockTimer;
-function resetAutoLockTimer() {
-  if (autoLockTimer) clearTimeout(autoLockTimer);
-  autoLockTimer = setTimeout(() => {
-    hideVault();
-    showStatus('Auto-locked after inactivity');
-  }, 2 * 60 * 1000);
-}
-
-// reset timer on any click or keypress
-document.addEventListener('click', resetAutoLockTimer);
-document.addEventListener('keypress', resetAutoLockTimer);
-
-
-hideVault();
+  hideVault();
   showStatus('Locked');
 });
 
@@ -220,20 +205,5 @@ function renderList() {
     }
   });
 }
-
-
-let autoLockTimer;
-function resetAutoLockTimer() {
-  if (autoLockTimer) clearTimeout(autoLockTimer);
-  autoLockTimer = setTimeout(() => {
-    hideVault();
-    showStatus('Auto-locked after inactivity');
-  }, 2 * 60 * 1000);
-}
-
-// reset timer on any click or keypress
-document.addEventListener('click', resetAutoLockTimer);
-document.addEventListener('keypress', resetAutoLockTimer);
-
 
 hideVault();

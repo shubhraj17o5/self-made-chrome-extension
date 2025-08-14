@@ -31,3 +31,43 @@ input::placeholder{color:rgba(230,238,248,0.4)}
 .list-item div{color:var(--muted);font-size:13px}
 .card-footer{text-align:center;margin-top:8px}
 .hidden{display:none}
+
+/* === Dark Glassmorphism Enhancements === */
+.card, .list-item, input, .btn, .reveal {
+  backdrop-filter: blur(14px) saturate(120%);
+  -webkit-backdrop-filter: blur(14px) saturate(120%);
+}
+
+.card {
+  background: rgba(15, 15, 20, 0.75); /* dark semi-transparent */
+  border: 1px solid rgba(255,255,255,0.10);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.55);
+}
+
+.list-item {
+  background: rgba(20,20,30,0.65);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+input {
+  background: rgba(25,25,35,0.65);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+}
+
+.btn {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.10);
+  color: #fff;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, rgba(166,108,255,0.85), rgba(123,75,255,0.85));
+  border-color: rgba(166,108,255,0.65);
+  color: #fff;
+}
+
+.reveal {
+  background: rgba(166,108,255,0.15);
+  border: 1px solid rgba(166,108,255,0.25);
+}
